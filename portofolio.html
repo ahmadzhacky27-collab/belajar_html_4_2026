@@ -12,7 +12,8 @@
     <header>
         <div class="nav-container">
             <h2 class="logo">AZ</h2>
-            <nav>
+            <button onclick="toogleMenu()">☰</button>
+            <nav id="menu">
                 <a href="#home">Home</a>
                 <a href="#ability">Ability</a>
                 <a href="#about">About</a>
@@ -82,41 +83,44 @@
         </div>
     </section>
     <!-- Contact -->
-    <section id="contact"></section>
+    <section id="contact">
+        <div class="container">
+            <h1>Kontak Saya</h1>
+            <p>Tertarik dengan saya? Silahkan hubungi saya dibawah ini!</p>
+            <form action="" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Your Name" required />
+                </div>
 
-    <div class="container">
-        <h1>Kontak Saya</h1>
-        <p>Tertarik dengan saya? Silahkan hubungi saya dibawah ini!</p>
-        <form action="" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="name">Nama</label>
-                <input type="text" id="name" name="name" placeholder="Enter Your Name" required />
-            </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required />
+                </div>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter Your Email" required />
-            </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Type Your Message" required></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Type Your Message" required></textarea>
-            </div>
+                <div class="button-group">
+                    <button type="submit">Kirim</button>
+                </div>
 
-            <div class="button-group">
-                <button type="submit">Kirim</button>
-            </div>
-
-        </form>
-    </div>
+            </form>
+        </div>
     </section>
-    </main>
 
     <footer class="footer">
         <div class="container">
             <p>&copy; <span id="year"></span> AZ. All rights reserved.</p>
         </div>
     </footer>
-  </body>
+    <script>
+        function toogleMenu() {
+            document.getElementById('menu').classList.toggle("tampil");
+        }
+    </script>
+</body>
 
 </html>

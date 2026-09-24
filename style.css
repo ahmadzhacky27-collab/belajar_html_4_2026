@@ -183,6 +183,11 @@ button[type="submit"]:hover {
     text-align: center;
 }
 
+.nav-container>button {
+    margin-right: 25px;
+    display: none;
+}
+
 @media (max-width: 480px) {
     .wrapper {
         flex-direction: column;
@@ -207,4 +212,29 @@ button[type="submit"]:hover {
     figure>img {
         height: 150px;
     }
+
+    .nav-container>button {
+        margin-right: 25px;
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        background-color: rgb(113, 113, 244);
+        width: auto;
+        padding: 10px 0px;
+        right: 25px;
+        top: 48px;
+    }
+
+    nav>a {
+        padding: 10px;
+        color: #333;
+    }
+
+    nav.tampil {
+        display: flex;
+    }
+
 }
